@@ -30,7 +30,7 @@ pub fn launch_virtual_dom_blocking(virtual_dom: VirtualDom, mut desktop_config: 
             Event::WindowEvent {
                 event, window_id, ..
             } => match event {
-                WindowEvent::CloseRequested => app.handle_close_requested(window_id),
+                WindowEvent::CloseRequested => {},
                 WindowEvent::Destroyed { .. } => app.window_destroyed(window_id),
                 WindowEvent::Resized(new_size) => app.resize_window(window_id, new_size),
                 _ => {}
